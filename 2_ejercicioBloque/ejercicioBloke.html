@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicioBloque</title>
+
+    <style>  
+        body{/* resteamos los margenes */
+            margin: 0%;
+        }
+        
+
+        header {
+            width: 100vw;
+            height: 33vh;
+            
+        }
+
+        main {
+            width: 100vw;
+            height: 33vh;
+         
+        }
+
+        footer {
+            width: 100vw;
+            height: 33vh;
+           
+        }
+
+
+        .cuadroBody {
+            /* propiedades de los cuadrados principales (contenedores) */
+            width: 33%;
+            height: 100%;
+            display:inline-block;
+
+        }
+        
+        /* cuadro 2 */
+        .filaSup1{
+            /* la primera fila del segundo cuadrado */
+            width: 100%;
+            height: 50%;
+            background-color: aqua;
+        }
+        .filaSup2{
+            /* la segunda fila del segundo cuadrado */
+            width: 100%;
+            height: 50%;
+            background-color:green;
+        }
+            /* cuadro 3 */
+        .filaDec{
+            width: 49%;
+            height: 100%;
+            background-color: aqua;
+            display:inline-block;
+        }
+
+        .filaIzq{
+            width: 49%;
+            height: 100%;
+            background-color: brown;
+            display:inline-block;
+           
+
+
+
+        }
+        /*cuadro 1  */
+        .supIqz{
+            width: 49%;
+            height: 50%;
+            background-color:yellowgreen;
+            display:inline-block;
+        }
+        .supDec{
+            width:49%;
+            height:50%;
+            background-color: cyan;
+            display:inline-block;
+        }
+     
+        .infIqz{
+            width:49%;
+            height:50%;
+            background-color: deeppink;
+            display:inline-block;
+        }
+        .infDec{
+            width: 49%;
+            height: 50%;
+            background-color: gold;
+            display:inline-block;
+        }
+        /* cuadrado 4 */
+        .filaSup{
+            width: 99%;
+            height: 33%;
+            background-color: coral;
+
+        }
+        .filaMed{
+            width: 99%;
+            height: 33%;
+            background-color: darkturquoise;
+        }
+       .filaInf{
+            width: 99%;
+            height: 33%;
+            background-color: chartreuse;
+       }
+       /* cuadrado 5 */
+       .cuadro5{
+            width: 100%;
+            height: 100%;
+            background-color:white;
+       }
+       /* cuadrado 6 */
+       .filaIzq6{
+            width: 32%;
+            height: 98%;
+            background-color: aquamarine;
+            display:inline-block;
+       }
+       .filaMed6{
+            width: 32%;
+            height: 98%;
+            background-color: chartreuse;
+            display:inline-block;
+       }
+       .filaDec6{
+            width: 32%;
+            height: 98%;
+            background-color: coral;
+            display:inline-block;
+       }
+        /* cuadrado 7 */
+       .filaSupDec7{
+            width: 49%;
+            height: 24%;
+            background-color: crimson;
+            display:inline-block;
+
+       }
+       .filaSupIqz7{
+            width: 49%;
+            height: 24%;
+            background-color: chartreuse;
+            display:inline-block;
+       }
+       .filaMed7{
+            width: 99%;
+            height: 50%;
+            background-color: gold;
+            display:inline-block;
+       }
+       .filaInf7{
+            width: 99%;
+            height: 25%;
+            background-color: fuchsia;
+            display:inline-block;
+       }
+
+      
+       /* cuadro 8 */
+        .cuad1{
+            width: 24%;
+            height: 100%;
+            background-color: tomato;
+            display: inline-block;
+       }
+       .cuad2{
+            width: 24%;
+            height: 100%;
+            background-color:chartreuse;
+            display: inline-block;
+       }
+       .cuad3{
+            width: 24%;
+            height: 100%;
+            background-color:rgb(255, 38, 0);
+            display: inline-block;
+       }
+       .cuad4{
+            width: 24%;
+            height: 100%;
+            background-color:rgb(60, 0, 255);
+            display: inline-block;
+       }
+       .cuad5{
+            width: 24%;
+            height: 100%;
+            background-color:rgb(204, 246, 18);
+            display: inline-block;
+            
+       }
+       .cuad6{
+            width: 24%;
+            height: 100%;
+            background-color:aqua;
+            display: inline-block;
+            
+       }
+
+       .cuad7{
+            width: 24%;
+            height: 100%;
+            background-color:darkorange;
+            display: inline-block;
+            
+       }
+       .cuad8{
+            width: 24%;
+            height: 100%;
+            background-color:deeppink;
+            display: inline-block;
+            
+       }
+       .cuad9{
+            width: 24%;
+            height: 100%;
+            background-color:aquamarine;
+            display: inline-block;
+            
+       }
+       .cuad10{
+            width: 24%;
+            height: 100%;
+            background-color:gold;
+            display: inline-block;
+            
+       }
+       .cuad11{
+            width: 24%;
+            height: 100%;
+            background-color:darkmagenta;
+            display: inline-block;
+            
+       }
+       .cuad12{
+            width: 24%;
+            height: 100%;
+            background-color:crimson;
+            display: inline-block;
+            
+       }
+       .cuad13{
+            width: 24%;
+            height: 100%;
+            background-color:blueviolet;
+            display: inline-block;
+            
+       }
+       .cuad14{
+            width: 24%;
+            height: 100%;
+            background-color:dodgerblue;
+            display: inline-block;
+            
+       }
+       .cuad15{
+            width: 24%;
+            height: 100%;
+            background-color:deeppink;
+            display: inline-block;
+            
+       }
+       .cuad16{
+            width: 24%;
+            height: 100%;
+            background-color:aquamarine;
+            display: inline-block;
+            
+       } 
+       /* las cuatro filas horizontales que contienen los cuadros */
+       #sec1{
+            height: 25%;
+            width: 100%;
+            background-color: aqua;
+        }
+        #sec2{
+            height:25%;
+            width: 100%;
+            background-color: blueviolet;
+        }
+        
+        #sec3{
+            height: 25%;
+            width: 100%;
+            background-color: crimson;
+            
+        }
+        #sec4{
+            height: 25%;
+            width: 100%;
+            background-color: coral;
+
+        }
+
+
+       /* cuadro 9 */
+       .filaSup9{
+            width: 100%;
+            height: 25%;
+            background-color: chartreuse;
+
+       }
+       .filaMed9{
+            width: 100%;
+            height: 25%;
+            background-color: darkorange;
+       }
+       .cuadInfDec9{
+            width: 32%;
+            height: 49%;
+            background-color:fuchsia;
+            display:inline-block ;
+
+       }
+       .cuadInfIzq9{
+            width: 32%;
+            height: 49%;
+            background-color: chartreuse;
+            display:inline-block ;
+
+        }
+        /* cuadro pequeño inferior derecha del cuadro 9*/
+        .cuad1Inf9{
+            /*contendor de los cuatro cuadrados pequeños*/
+            width:33% ;
+            height: 49%;
+            background-color: darksalmon;
+            display:inline-block;
+
+        }
+        .caja1{
+            height: 50%;
+            width: 50%;
+            background-color: dimgray;
+            display:inline-block;
+            
+        }
+        .caja2{
+            height: 50%;
+            width: 50%;
+            background-color: deeppink;
+            display:inline-block;
+            
+        }
+        .caja3{
+            height: 50%;
+            width: 50%;
+            background-color: bisque;
+            display:inline-block;
+            
+        }
+        .caja4{
+            height: 50%;
+            width: 50%;
+            background-color: cornflowerblue;
+            display:inline-block;
+            
+        }
+       
+
+    </style>
+</head>
+    <body>
+    <header class="Bloque1">
+            <!-- cuadro 1 -->
+            <div id="cuadro1" class="cuadroBody">
+                <div class="supIqz"></div>
+                <div class="supDec"></div>
+                <div class="infIqz"></div>
+                <div class="infDec"></div>
+
+            </div>
+            <!-- cuadro 2 -->
+            <div id="cuadro2" class="cuadroBody">
+                <div class="filaSup1"></div>
+                <div class="filaSup2"></div>
+            
+            </div>
+            <!-- cuadro 3 -->
+            <div id="cuadro3" class="cuadroBody">
+                <div class="filaDec"></div>
+                <div class="filaIzq"></div>
+            </div>
+   </header>
+   
+    <main class="Bloque2">
+            <!-- cuadro 4 -->
+            <div id="cuadro4" class="cuadroBody">
+                <div class="filaSup"></div>
+                <div class="filaMed"></div>
+                <div class="filaInf"></div>
+            </div>
+            <!-- cuadro 5 -->
+            <div id="cuadro5" class="cuadroBody"></div>
+            <!-- cuadro 6 -->
+            <div id="cuadro6" class="cuadroBody">
+                <div class="filaIzq6"></div>
+                <div class="filaMed6"></div>
+                <div class="filaDec6"></div>
+
+            </div>
+    </main>
+    <footer class="Bloque3">
+            <!-- cuadro 7 -->
+            <div id="cuadro7" class="cuadroBody">
+                <div class="filaSupDec7"></div>
+                <div class="filaSupIqz7"></div>
+                <div class="filaMed7"></div>
+                <div class="filaInf7"></div>
+            </div>
+            <!--cuadro 8-->
+            <div id="cuadro8" class="cuadroBody">
+            <div id="sec1">
+                <div class="cuad1"></div>
+                <div class="cuad2"></div>
+                <div class="cuad3"></div>
+                <div class="cuad4"></div>
+            </div>
+            <div id="sec2">
+                <div class="cuad5"></div>
+                <div class="cuad6"></div>
+                <div class="cuad7"></div>
+                <div class="cuad8"></div>
+            </div>
+            <div id="sec3">   
+                <div class="cuad9"></div>
+                <div class="cuad10"></div>
+                <div class="cuad11"></div>
+                <div class="cuad12"></div>
+            </div>
+            <div id="sec4">  
+                <div class="cuad13"></div>
+                <div class="cuad14"></div>
+                <div class="cuad15"></div>
+                <div class="cuad16"></div>
+            </div>   
+
+            </div>
+            <!-- cuadro 9 -->
+            <div id="cuadro9" class="cuadroBody">
+                <div class="filaSup9"></div>
+                <div class="filaMed9"></div>
+                <div class="cuadInfDec9"></div>
+                <div class="cuadInfIzq9"></div>
+                <div class="cuad1Inf9"><!--contendor de los cuatro cuadrados pequeños-->
+                    <div class="caja1"></div><div class="caja2"></div>
+                    <div class="caja3"></div><div class="caja4"></div>
+                </div>
+                
+            </div>
+    
+    </footer>
+</body>
+</html>
+
