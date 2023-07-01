@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Proyecto</title>
+    <style>
+        /* reseteamos los margenes del body */
+        body{
+            margin: 0%;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            height:33% ;
+            width: 100%;
+        }
+        main{
+            display: flex;
+            /* height: 33%; */
+            width: 100%;
+            flex-direction: column;
+        }
+        footer{
+            display: flex;
+            height: 33%;
+            width: 100%;
+            flex-direction: column;
+        }
+        /* linea de separacion del Header */
+        #linea{
+            margin-left: 25%;
+            width: 50%;
+            display: flex;
+            background-color: whitesmoke;
+            border:1px;
+            box-shadow: 2px 2px gainsboro;
+            height: 2px;
+        }
+        .ContenedorMenu{
+            display:flex;
+            justify-content: right;
+            
+
+        }
+        /* .menu{
+            display:flex;
+            
+
+        } */
+        .ContenedorTitulo{
+            display:flex;
+            justify-content: center;
+        }
+        .ContenedorTexto{
+            display: flex;
+            justify-content: center;
+        }
+        .Titulo{
+            display:flex;
+            font-size:xx-large;
+        }
+        .TextoHeader{
+            display:flex;
+            justify-content: center;
+            font-size: larger;
+            margin-left: 10%;
+            margin-right: 10%;
+
+        }
+        .ContenedorTituloTexto{
+            display:flex;
+            flex-direction: column;
+
+        }
+        /* li {
+        
+          
+            display:flex;
+            display: inline;
+            justify-items: center;
+        } */
+        .TituloMain{
+            display: flex;
+            justify-content: center;
+            font-size:xx-large;
+        }
+        /* propiedades del testo de los parrafos le añadimos margin para centrarlo */
+        .TextoMain{
+            display:flex;
+            font-size: large;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: larger;
+        }
+        .ul{
+            width: 25rem;
+            justify-content: baseline;
+            display:flex;
+            text-align: center;
+            
+
+        }
+        .ContenedorLista{
+           
+            display:flex;
+
+
+        }
+        section{
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            
+
+        }
+        .ContenedorTituloGaleria{
+            display: flex;
+            justify-content: center;
+
+        }
+        .TituloGaleria{
+            display: flex;
+            justify-content: center;
+            font-size:xx-large;
+
+        }
+        .ContenedorTextoGaleria{
+            display:flex;
+
+        }
+        .TextoGaleria{
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: larger;
+
+
+        }
+        /* propiedades de la seccion Galeria de Productos */
+        .ContenedorLista{
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+        .CajaVentaja{
+            display:flex;
+
+        }
+        /* le damos ancho al contenedor de los textos para encuadrarlo */
+        .VentajaTexto{
+            display:flex;
+            width: 320px;
+        }
+        .ContenedorCheckVentaja{
+            display: flex;
+
+        }
+        /* le damos alto a la imagen para que no se distorsione */
+        .imagenCheck{
+            height: 111px;
+
+        }
+        figcaption{
+            text-align: center;
+        
+        }
+        .TituloCasosDeExito{
+            display: flex;
+            justify-content: center;
+            font-size:xx-large;
+
+        }
+        .ContenedorCuadroTexto{
+            display:flex;
+            justify-content: center;
+
+        }
+        .CuadroTexto{
+            display:flex;
+            width: 500px;
+            
+
+        }
+        #Seccion2{
+            display:flex;
+            flex-direction: column;
+
+        }
+        .CuadroMensaje{
+            display: flex;
+            margin-left: 20%;
+            margin-bottom: 5%;
+            width: 60%;
+            background-color:lightblue;
+            border:100px black;
+            /* box-shadow: 2px 2px gray; */
+            height: 140px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .CajaTituloFooter1{
+            
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+
+           
+
+
+        }
+        #FooterSeccion1{
+            display: flex;
+            flex-direction: column;
+           
+
+        }
+        .TituloFooter1{
+            display: flex;
+            justify-content: center;
+            /* margin-left: 1%; */
+            font-size:xx-large;
+
+
+        }
+        .TextoFooter1{
+            display: flex;
+            width: 60%;
+            padding-left: 20%; 
+        }
+        .ContenedorCuadros1{
+            display: flex;
+            justify-content: space-evenly;
+            /* margin-left: 1%; */
+
+            
+        }
+        .CuadroCorreo{
+            display: flex; 
+            width: 10%;
+            background-color:lightblue;
+            /* box-shadow: 2px 2px gray; */
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+        }
+        .CuadroNombre{
+            display: flex; 
+            width: 10%;
+            background-color:lightblue;
+            
+            /* box-shadow: 2px 2px gray; */
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+        }
+        .Envío{
+            display: flex; 
+            width: 10%;
+            background-color:lightblue;
+            
+            /* box-shadow: 2px 2px gray; */
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+        }
+        .FooterSeccion2{
+            display:flex;
+            flex-direction: column;
+        }
+        .TituloFooter2{
+            display: flex;
+            justify-content: center;
+            font-size:xx-large;
+        }
+        .Descarga{
+            display: flex; 
+            width: 10%;
+            background-color:lightblue;
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 45%;
+
+        }
+        
+        
+        
+        
+
+
+
+     
+
+
+    </style>
+</head>
+    
+<body>
+    <header>
+        <!-- menu del header -->
+        <div class="ContenedorMenu">
+        <ul class="menu">
+            <a href="#NUESTRO PROYECTO DE INICIO">Menu Inicio</a>
+            <a href="#CARACTERISTICAS DEL PRODUCTO">Sobre nosotros</a>
+            <a href="#CASOS DE EXITO">Casos de éxito</a>
+            <a href="#DESCARGA NUESTRA APP">Descargas</a>
+            <a href="#CONTÁCTANOS">Contacto</a>
+        </ul>
+        </div>
+        <!-- titulo y parrafo del Header -->
+        <div class="ContenedorTitulo">
+            <p class="Titulo">NUESTRO PROYECTO DE INICIO</p>
+        </div>
+        <div class="ContendorTexto">
+            <p class="TextoHeader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veniam tenetur minima cupiditate, consectetur ad nemo expedita sint commodi! Ipsum, ducimus! Sequi cupiditate dolor error asperiores.</p>
+        </div>
+        <!-- linea de separacion del header  -->
+        <div id="linea"></div>
+    
+    </header>
+    <!-- Primera seccion de la pagina -->
+    <main>
+        <div class="ContenedorTituloTexto">
+        <div class="ContenedorTituloMain">
+            <p class="TituloMain">CARACTERISTICAS DEL PRODUCTO</p>
+        </div>
+        <div class="ContendorTextoMain">
+            <p class="TextoMain">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit quaerat accusamus sed aut. Voluptate placeat quaerat quia quis ipsam! Quidem iure nisi suscipit tempore nesciunt in?</p>
+        </div>
+        <!-- creamos la listas de las ventajas del producto  -->
+        <!-- una imagen "check.jpg" seguida del texto  -->
+        <!-- le damos una clase a la imagenCheck para poder colocarla -->
+        
+        <div class="ContenedorLista">
+                <div class="CajaVentaja">
+                <div class="ContenedorCheckVentaja">
+                    <img class="imagenCheck"src="/img/check.jpg" alt="">
+                    <p class="VentajaTexto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, non corrupti? Harum accusantium voluptatum minima commodi, earum itaque?</p>
+                </div>
+                </div>
+                <div class="CajaVentaja">
+                <div class="ContenedorCheckVentaja">
+                    <img class="imagenCheck"src="/img/check.jpg" alt="">
+                    <p class="VentajaTexto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, non corrupti? Harum accusantium voluptatum minima commodi, earum itaque?</p>
+                </div>
+                </div>
+                <div class="CajaVentaja">
+                <div class="ContenedorCheckVentaja">
+                    <img class="imagenCheck"src="/img/check.jpg" alt="">
+                    <p class="VentajaTexto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, non corrupti? Harum accusantium voluptatum minima commodi, earum itaque?</p>
+                </div>
+                </div>
+            
+        </div>  
+        </div>
+
+        <div id="linea"></div>
+        <!-- seccion de Galeria de Producto -->
+        <div class="ContenedorTituloGaleria">
+            <p class="TituloGaleria">GALERIA DE PRODUCTOS</p>
+        </div>
+        <div class="ContenedorTextoGaleria">
+            <p class="TextoGaleria">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam tempora soluta eos voluptatem illo reiciendis aspernatur? Laudantium cumque eum tenetur, laboriosam id ab distinctio eligendi voluptatem!</p>
+        </div>
+
+        <div class="ContenedorImagenes">
+
+        </div>
+        <section>
+            <figure>
+                <img src="/img/chocolate50.jpg" alt="">
+                <figcaption>Julitos de Chocolate</figcaption>
+            </figure>
+            <figure>
+                <img src="/img/blanco50.jpg" alt="">
+                <figcaption>Julitos Chocolate Blanco</figcaption>
+            </figure>
+            <figure>
+                <img src="/img/limon50.jpg" alt="">
+                <figcaption>Julitos de Limon</figcaption>
+            </figure>
+            <figure>
+                <img src="/img/rosa50.jpg" alt="">
+                <figcaption>Julitos Chicle Rosa</figcaption>
+            </figure>
+        </section>
+
+        <div id="linea"></div>
+        <!-- Sección de Casos de Exito -->
+        <!-- asignamos un id a la section2 para poder agrupar los elementos del mismo -->
+        <!-- y diferenciarlos de la secction principal -->
+        <section id="Seccion2">
+            <div  class="ContenedorCasosDeExito">
+                <p class="TituloCasosDeExito">CASOS DE EXITO</p>
+            </div>
+            <div class="ContenedorCuadroTexto">
+                
+                <div class="CuadroTexto">
+                    <p class="TextoCuadro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sapiente error soluta sunt magni hic cumque vel suscipit repellendus. Eveniet doloremque reiciendis maxime numquam et. Accusantium, explicabo?</p>
+                </div>
+                <div class="CuadroTexto">
+                    <p class="TextoCuadro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est quae, id excepturi repudiandae inventore suscipit dicta minima sequi fugiat eum ipsa at nobis voluptates, sapiente saepe.</p>
+                </div>
+                <div class="CuadroTexto">
+                    <p class="TextoCuadro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quam reprehenderit explicabo repellendus iure quidem accusantium totam, aut odit obcaecati! Praesentium ea molestias amet rerum quibusdam quam?</p>
+                </div>
+            </div>
+        </section>
+        
+        
+
+
+    </main>
+    <div id="linea"></div>
+    <footer>
+        <section id="FooterSeccion1">
+        <div class="CajaTituloFooter1">
+            <p class="TituloFooter1">CONTÁCTANOS</p>
+            <p class="TextoFooter1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quaerat placeat sint eveniet molestias earum, eos tempore repudiandae vel provident tenetur. Commodi libero repellendus sapiente repellat.</p>
+        </div>
+        
+        <div class="CuadroMensaje">MENSAJE</div>
+        <div class="ContenedorCuadros1">
+        <div class="CuadroCorreo">Correo</div>
+        <div class="CuadroNombre">Nombre</div>
+        <div class="Envío">Envío</div>
+        </div>
+        
+
+
+        </section>
+
+        <section id="FooterSeccion2">
+            <div class="CajaTituloFooter2">
+                <p class="TituloFooter2">DESCARGA NUESTRA APP</p>
+                <p class="TextoFooter2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque iure, at saepe placeat maxime corporis eligendi perspiciatis deserunt!</p>
+                <div class="Descarga">Descargar</div>
+            </div>
+        </section>
+        
+        <div id="linea"></div>
+
+        <section id="FooterSeccion3">
+            <div class="CajaMenuFooter3">
+                <div class="ContenedorMenu">
+                    <ul class="menu">
+                        <a href="#NUESTRO PROYECTO DE INICIO">Menu Inicio</a>
+                        <a href="#CARACTERISTICAS DEL PRODUCTO">Sobre nosotros</a>
+                        <a href="#CASOS DE EXITO">Casos de éxito</a>
+                        <a href="#DESCARGA NUESTRA APP">Descargas</a>
+                        <a href="#CONTÁCTANOS">Contacto</a>
+                    </ul>
+                    </div>
+                    
+            </div>
+            <div id="CajaDireccion3">
+            <div id="linea"></div>
+           
+            </div>
+        </section>
+
+
+
+    </footer>
+    
+</body>
+</html>
