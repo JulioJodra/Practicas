@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+    <style>
+        /* limpiamos estilos del body y le añadimos un color */
+        body{
+            margin:0;
+            background-color: antiquewhite;
+        }
+        /* creamos los tres contenedores de los que consta la pagina  */
+        header{
+            height: 25vh;
+            width: 100vw;
+            text-align: center;
+         }
+        main{
+            height: 35vh;
+            width: 100vw;
+        }
+        footer{
+            height: 40vh;
+            width: 100vw;
+            background-color: cornflowerblue;
+        }
+        nav{
+            text-align: left;
+        }
+        /* propiedades de los botones de navegacion */
+        a{  
+            text-decoration:none;   /* limpiar atributos del texto */
+            color:beige; /*color de la fuente */
+            padding: 0.5em; /* separa el interior de los bordes*/
+            border-radius:10px; /*radio de los brodes*/
+            background-color:gray; /*color del fondo*/
+            box-shadow: 4px 4px; /*añade sombra al enlace*/
+            border: 1px solid black;
+            margin: 5px; /* añade margen*/
+            text-shadow: 2px 2px black;  
+        }
+        .cuadroBody {
+            /* propiedades de los cuadrados principales (contenedores) */
+            width: 33%;
+            height: 100%;
+            display:inline-block;
+        }
+        .menuFoot{
+            /* convertimos el menu del footer en flex */
+            display:flex;
+            /* ponemos los botones en columna */
+            flex-direction: column;
+            /* ajustamos la longitud de la caja de los botones */
+            align-items: flex-start;
+            margin-top: 5%;
+            /* margen entre elementos verticales */
+            grid-gap: 20px;
+            align-content: space-evenly;
+        }
+        /* texto del cuerpo  */
+        .textoPag{
+            text-decoration: none;
+            font-size:20vh;
+            text-align: center;
+            text-decoration-line: underline;
+            text-decoration-color: coral;
+        }
+        /* propiedades de los botones de la cabecera */
+        .menuHead{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="Bloque1">
+            <h1>HOME</h1>
+        <nav class="menuHead">
+            <!--añade enlace al menu -->
+            <a href="/miweb1.html">mi web1</a>             
+            <a href="/miweb2.html">mi web2</a>
+            <a href="/miweb3.html">mi web3</a>         
+            <a href="/miweb4.html">mi web4</a>        
+            <a href="/miweb5.html">mi web5</a>             
+        </nav>
+    </header>
+    <main class="Bloque2">
+        <P class="textoPag">PAGINA PRINCIPAL</P>
+    </main> 
+    <footer class="Bloque3">
+        <nav class="menuFoot">
+            <a href="/miweb1.html">mi web1</a>
+            <a href="/miweb2.html">mi web2</a>
+            <a href="/miweb3.html">mi web3</a>
+            <a href="/miweb4.html">mi web4</a>
+            <a href="/miweb5.html">mi web5</a>
+        </nav>
+    </footer>
+</body>
+</html>
