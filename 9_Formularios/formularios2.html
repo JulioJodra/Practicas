@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios2</title>
+    <script>
+    </script>
+    <style>
+        label,input{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="activar">Activar</button>
+    <button id="desactivar">Desactivar</button>
+    
+    <!-- 1. Crea un Formulario con 10 campos (3 obligatorios) -->
+    <fieldset>
+        <form>
+            <form action="" method="get" name="miFormAcceso">
+                <fieldset id="campos">
+
+                
+                    <label for="user">USUARIO:</label>
+                    <input type="text" name="txtUsuario" id="user" required>
+                    <label for="pass">CONTRASEÑA:</label>
+                    <input type="password" name="pasUsuario" id="pass" required minlength="3" maxlength="10">
+                    <label for="fechanac">FECHA DE NACIMIENTO</label>
+                    <input type="date" name="fechanac" id="edad" required >
+                    <label for="direccion">DIRECCION:</label>
+                    <input type="text" name="txtDireccion" id="domicilo" minlength="0" maxlength="30">
+                    <label for="telefono">TELEFONO:</label>
+                    <input type="number" name="numTelefono" id="tlf" minlength="9" maxlength="9">
+                    <label for="correo">CORREO:</label>
+                    <input type="text" name="txtCorreo" id="correoElec" minlength="0" maxlength="30">
+                    <label for="comunidad">COMUNIDAD:</label>
+                    <input type="text" name="txtComunidad" id="userComunidad" minlength="0" maxlength="10">
+                    <label for="ciudad">CIUDAD:</label>
+                    <input type="text" name="txtCiudad" id="userCiudad" minlength="0" maxlength="12">
+                    <label for="cPostal">C. POSTAL:</label>
+                    <input type="number" name="numCpostal" id="CodPost" minlength="5" maxlength="5">
+                    <label for="pais">PAIS:</label>
+                    <input type="text" name="txtpais" id="userPais">
+                    <label for="DNI">DNI:</label>
+                    <input type="number" name="txtDni" id="userDni">
+                    
+
+                
+                </fieldset>
+                </fieldset>
+                <fieldset id="validacion">
+                    <!-- Enviar Formulario -->
+                    <input type="submit" value="ENVIAR">
+                </fieldset>
+            </form>
+        </form>
+    </fieldset>
+    
+</body>
+</html>
