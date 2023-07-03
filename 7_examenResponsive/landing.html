@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion</title>
+    <style>
+        /* propiedades de los bordes de los contenedores */
+        *{
+            box-sizing: border-box;
+        }
+        /* cambiamos la fuente  */
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+        /* quitamos el margen al body */
+        /* le agregamos un fondo */
+        body{
+            margin:0%;
+            background-image: url(/img/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+            
+        }
+        /* ajustamos el tamaño y la disposicion de los menus */
+        header{
+            display:flex;
+            height:7% ;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+          
+
+        }
+        /* propiedades del Main */
+        /* tamaño y centrado */
+        main{
+           
+            width: 100vw;
+            height: 87vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+
+
+        }
+        /* propiedades del Footer */
+        /* tamaño y centrado */
+        footer{
+            display:flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+        }
+        /* propiedades del menu */
+        /* y de sus elementos */
+        
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        /* marcos de los cuadros del texto y de las imagenes */
+        div {
+            width: 40%;
+            height: 90%;
+            border: solid slategray;
+            border-radius: 25px;
+
+        }
+        /* propiedades del titulo del cuadro texto */
+        h1{
+            padding: 0.5rem;
+            color: crimson;
+            text-align: center;
+        } 
+        /* propiedades del parrafo */
+        p{
+            padding: 0.5rem;
+        }
+        /* propiedades de la imagen */
+        img {
+            height: 60%;
+            
+        }
+       
+      
+    </style>
+</head>
+<body>
+    <!-- cabecera que contiene los menus de navegacion -->
+    <header>
+        <nav class="menu">
+            <ul>
+                <a href="Home">Home</a> 
+                <a href="/compartir.html">Compartir</a>
+            </ul>
+        </nav>
+        
+
+    </header>
+    <main>
+        <!-- Titulo de la pagina  -->
+        <!-- Parrafo  -->
+        <!-- Imagen -->
+        <div>
+            <h1>MOTOR CLASIC</h1>
+            <p>Conoce nuestro taller y prepara tu vehiculo para la proxima aventura, entra en nuestras instalaciones y descubre todo los necsario para tu vehiculo, tenemos los mejores precios el personal mas cualificado y las instalaciones mas modernas </p>
+        </div>
+
+        <picture>
+            <img src="/img/logo.png" alt="">
+            
+        </picture>
+
+    </main>
+    <footer>
+        <!-- menu del Footer -->
+        <!-- con enlace a la pagina principal y redes sociales -->
+        <nav class="menu">
+            <ul>
+                <a href="/examen.html">Home</a> 
+                <a href="/https://es-es.facebook.com">Compartir</a>
+            </ul>
+        </nav>
+
+
+    </footer>
+    
+</body>
+</html>

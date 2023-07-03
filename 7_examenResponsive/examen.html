@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaginaPrincipal</title>
+      <style>
+        *{
+            /* ponemos el estilo de los bordes de las cajas */
+            box-sizing: border-box;
+        }
+            /* cambiamos el tipo de fuente */
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+            /*añadimos un fondo al body  */
+            /* cambiamos tipo de fuente */
+        body{
+            margin:0%;
+            background-image: url(/img/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+            
+        }
+        header{
+            /* añadimos propiedades del header */
+            display:flex;
+            height:7% ;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+          
+
+        }
+            /* damos tamaño al Main y ordenamos los elementos */
+        main{
+            display: flex;
+            width: 100vw;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+            /* damos tamaño al Footer y ordenamos los elementos */
+        footer{
+            display:flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97,92,92,1);
+            flex-direction: column;
+
+        }
+            /* propiedades de los menus y sus elementos */
+        
+        ul{
+            display:flex;
+            justify-content:space-evenly;
+       
+        }
+        a{
+            display:inline-flex;
+            color: rgba(255,255,255,1);
+            top: 198px;
+            left: 188px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            
+        }
+        /* propiedades de los contenedores de parrafos e imagenes */
+        div {
+            width: 40%;
+            height: 90%;
+            border: solid slategray;
+            border-radius: 25px;
+
+        }
+        /* propiedades de los parrafos y titulos */
+        h1, p{
+            padding: 0.5rem;
+        }
+         /* propiedades de las imagenes  */
+        img {
+            height: 60%;
+            
+        }
+        /* propiedades de las Secciones coche, moto, taller */
+        section{
+            display:flex;
+            flex-direction: row;
+            margin-left: 25%;
+        }
+        /* La foto de la cabecera dentro de su contenedor */
+        .contFotoCabecera{
+            width: 100%;
+        }
+        .fotoCabecera{
+                display:flex;
+                width: 100%;
+        }
+
+
+      </style>  
+    </title>
+</head>
+<body>
+    <header>
+        <!-- Cabecera que contiene el titulo, foto y menu  -->
+        <h1 class="textoCabecera">MOTOR CLASIC</h1>
+            <div class="contFotoCabecera">
+            <img class="fotoCabecera" src="/img/cuadro1.jpg" alt="" >
+        </div>
+        <nav>
+            <ul>
+                <a href="/#COCHES">Automoviles</a>
+                <a href="/#MOTOS">Motos</a> 
+                <a href="/#TALLER">Taller</a>
+                <a href="/landing.html">Inicio</a>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <!-- primera seccion de la pagina coches -->
+<section>
+        <div>
+            <h1>COCHES</h1>
+            <p>Nuestros coches de segunda mano pasan un estricto mantenimiento y son analizados exhaustivamente por nuestro grupo de mecanicos especializados en las diferentes marcas que existen en nuestro mercado, tambien importamos coches que provienen de otros paises con la maxima eficacia y cuidando hasta el minimo detalle el proceso de transporte, realizamos modificaciones de los coches añadiendo extras , navegadores , sistemas de sonido y potenciacion del motor antes de la entrega del mismo</p>
+        </div>
+        <!-- añadimos la imagen al parrafo -->
+        <picture>
+            <img src="/img/coche10.png" alt="">
+            
+        </picture>
+    </section>
+        <!-- segunda seccion de la pagina motos -->
+    <section>
+        <div>
+            <h1>MOTOS</h1>
+            <p>Nuestros motos de segunda mano pasan un estricto mantenimiento y son analizados exhaustivamente por nuestro grupo de mecanicos especializados en las diferentes marcas que existen en nuestro mercado, tambien importamos coches que provienen de otros paises con la maxima eficacia y cuidando hasta el minimo detalle el proceso de transporte, realizamos modificaciones de las motos añadiendo extras , navegadores , sistemas de sonido y potenciacion del motor antes de la entrega del mismo</p>
+        </div>
+        <!-- añadimos la imagen al parrafo -->
+        <picture>
+            <img src="/img/moto10.png" alt="">
+        </picture>
+    </section>
+
+            <!--tercera seccion de la pagina taller  -->
+        <section>
+
+                <div>
+                <h1>TALLER</h1>
+                <p>En nuestros talleres , puede realizar cualquier tipo de mantenimiento a su vheiculo, realizamos cambios de aceite, reparaciones de motor, suspensiones y realizamos cambio reparacion y mantenimiento de cajas de cambio automatico. Tambien disponemos de horno de pintura y reparacion de chapa, nuestros clientes tienen a su disposición coche de sustitucion todo el tiempo necesario para la reparacion de su vehiculo </p>
+                </div>
+                <!-- añadimos la imagen al parrafo -->
+                <picture>
+                <img src="/img/taller10.png" alt="">
+                </picture>
+        </section>
+
+
+    </main>
+        <footer>
+        <nav>
+            <ul>
+                <a href="/#COCHES">Automoviles</a>
+                <a href="/#MOTOS">Motos</a> 
+                <a href="/#TALLER">Taller</a>
+                <a href="/landing.html">Inicio</a>
+            </ul>
+        </nav>
+        <p>Julio Jodra Centeno Julio_jodra@yahoo.es copyright 2023</p>
+
+    </footer>
+    
+</body>
+</html>

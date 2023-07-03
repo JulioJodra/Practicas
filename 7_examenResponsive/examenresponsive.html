@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaginaPrincipal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'miFuente';
+            src: url(fonts/BowlbyOneSC-Regular.ttf);
+        }
+
+        body {
+            margin: 0;
+            background-image: url(/img/abstracto.jpeg);
+            font-family: 'miFuente';
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            height: 7%;
+            width: 100%;
+            background: rgba(97, 92, 92, 1);
+            flex-direction: column;
+        }
+
+        main {
+            display: flex;
+            width: 100vw;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer {
+            display: flex;
+            height: 10%;
+            width: 100%;
+            background: rgba(97, 92, 92, 1);
+            flex-direction: column;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            display: inline-flex;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        div {
+            width: 100%;
+            height: 90%;
+            border: solid slategray;
+            border-radius: 25px;
+        }
+
+        h1,
+        p {
+            padding: 0.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .contFotoCabecera {
+            width: 100%;
+        }
+
+        .fotoCabecera {
+            display: flex;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            ul {
+                justify-content: space-between;
+            }
+
+            section {
+                flex-direction: row;
+            }
+
+            div {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="textoCabecera">MOTOR CLASIC</h1>
+        <div class="contFotoCabecera">
+            <img class="fotoCabecera" src="/img/cuadro1.jpg" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/#COCHES">Automoviles</a></li>
+                <li><a href="/#MOTOS">Motos</a></li>
+                <li><a href="/#TALLER">Taller</a></li>
+                <li><a href="/landing.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h1>COCHES</h1>
+                <p>Nuestros coches de segunda mano pasan un estricto mantenimiento y son analizados exhaustivamente por nuestro grupo de mecanicos especializados en las diferentes marcas que existen en nuestro mercado, tambien importamos coches que provienen de otros paises con la maxima eficacia y cuidando hasta el minimo detalle el proceso de transporte, realizamos modificaciones de los coches añadiendo extras , navegadores , sistemas de sonido y potenciacion del motor antes de la entrega del mismo</p>
+            </div>
+            <picture>
+                <img src="/img/coche10.png" alt="">
+            </picture>
+        </section>
+        <section>
+            <div>
+                <h1>MOTOS</h1>
+                <p>Nuestros motos de segunda mano pasan un estricto mantenimiento y son analizados exhaustivamente por nuestro grupo de mecanicos especializados en las diferentes marcas que existen en nuestro mercado, tambien importamos coches que provienen de otros paises con la maxima eficacia y cuidando hasta el minimo detalle el proceso de transporte, realizamos modificaciones de las motos añadiendo extras , navegadores , sistemas de sonido y potenciacion del motor antes de la entrega del mismo</p>
+            </div>
+            <picture>
+                <img src="/img/moto10.png" alt="">
+            </picture>
+        </section>
+        <section>
+            <div>
+                <h1>TALLER</h1>
+                <p>En nuestros talleres, puede realizar cualquier tipo de mantenimiento a su vheiculo, realizamos cambios de aceite, reparaciones de motor, suspensiones y realizamos cambio reparacion y mantenimiento de cajas de cambio automatico. Tambien disponemos de horno de pintura y reparacion de chapa, nuestros clientes tienen a su disposición coche de sustitucion todo el tiempo necesario para la reparacion de su vehiculo </p>
+            </div>
+            <picture>
+                <img src="/img/taller10.png" alt="">
+            </picture>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/#COCHES">Automoviles</a></li>
+                <li><a href="/#MOTOS">Motos</a></li>
+                <li><a href="/#TALLER">Taller</a></li>
+                <li><a href="/landing.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <p>Julio Jodra Centeno Julio_jodra@yahoo.es © 2023</p>
+    </footer>
+</body>
+</html>
+<!-- Se agregó la regla list-style-type: none; 
+    al selector ul para eliminar los estilos de lista por defecto.
+    Se agregó la regla text-decoration: none;
+    al selector a para eliminar la decoración de subrayado en los enlaces.
+    Se reemplazó la regla width: 40%; en el selector div por width: 100%;
+    para que ocupe todo el ancho disponible.
+    Se agregó la regla max-width: 100%; y height: auto; 
+    al selector img para asegurar que las imágenes se ajusten correctamente 
+    al ancho de su contenedor y se mantengan -->
