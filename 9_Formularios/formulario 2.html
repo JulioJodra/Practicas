@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Registro</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="activarFormulario">Activar Formulario</button>
+    <div id="formulario" class="hidden">
+        <h2>Formulario de Registro</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre" >
+            <input type="text" id="apellido" placeholder="Apellido" >
+            <input type="text" id="dni" placeholder="DNI" >
+            <input type="text" id="email" placeholder="Email" >
+            <input type="text" id="telefono" placeholder="Teléfono" >
+            <input type="text" id="direccion" placeholder="Dirección" >
+            <input type="text" id="ciudad" placeholder="Ciudad" >
+            <input type="text" id="codigoPostal" placeholder="Código Postal" >
+            <input type="text" id="pais" placeholder="País" >
+            <input type="text" id="ocupacion" placeholder="Ocupación" >
+            <br>
+            <br>
+            <button type="submit" >Enviar</button>
+        </form>
+    </div>
+    <div id="datosRegistrados" class="hidden">
+        <h2>Datos Registrados</h2>
+        <div id="datosOutput"></div>
+    </div>
+
+    <script>
+        // document.getElementById('activarFormulario').addEventListener('click', function() {
+        //     document.getElementById('formulario').classList.remove('hidden');
+        //     document.getElementById('activarFormulario').setAttribute('disabled', 'true');
+        //     document.getElementById('nombre').removeAttribute('disabled');
+        // });
+        // ACTIVAR O DESACTIVAR FORMULARIO
+        document.getElementById('activarFormulario').addEventListener('click', function() {
+            var formulario = document.getElementById('formulario');
+            if (formulario.classList.contains('hidden')) {
+                formulario.classList.remove('hidden');
+                formElement.reset();
+                currentFieldIndex = 0;
+                activarCampo();
+            } else {
+                formulario.classList.add('hidden');
+                document.getElementById('datosRegistrados').classList.add('hidden');
+            }
+        });
+
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            var datos = []; // Array para guardar los datos
+
+            // Validar cada campo y guardar los datos en el array
+            var nombre = document.getElementById('nombre').value.toUpperCase();
+            if (nombre.trim() === '') {
+                alert('Por favor, ingrese su nombre.');
+                return;
+            }
+            datos.push(nombre);
+
+            var apellido = document.getElementById('apellido').value.toUpperCase();
+            if (apellido.trim() === '') {
+                alert('Por favor, ingrese su apellido.');
+                return;
+            }
+            datos.push(apellido);
+
+            var dni = document.getElementById('dni').value.toUpperCase();
+            if (!validarDNI(dni)) {
+                alert('Por favor, ingrese un DNI válido (formato: 12345678A).');
+                return;
+            }
+            datos.push(dni);
+
+            var email = document.getElementById('email').value;
+            if (!validarEmail(email)) {
+                alert('Por favor, ingrese un correo electrónico válido.');
+                return;
+            }
+            datos.push(email);
+
+            var telefono = document.getElementById('telefono').value;
+            if (!validarTelefono(telefono)) {
+                alert('Por favor, ingrese un número de teléfono válido (formato: 123456789).');
+                return;
+            }
+            datos.push(telefono);
+
+            var direccion = document.getElementById('direccion').value;
+            if (direccion.trim() === '') {
+                alert('Por favor, ingrese su dirección.');
+                return;
+            }
+            datos.push(direccion);
+
+            var ciudad = document.getElementById('ciudad').value;
+            if (ciudad.trim() === '') {
+                alert('Por favor, ingrese su ciudad.');
+                return;
+            }
+            datos.push(ciudad);
+
+            var codigoPostal = document.getElementById('codigoPostal').value;
+            if (!validarCodigoPostal(codigoPostal)) {
+                alert('Por favor, ingrese un código postal válido (formato: 12345).');
+                return;
+            }
+            datos.push(codigoPostal);
+
+            var pais = document.getElementById('pais').value;
+            if (pais.trim() === '') {
+                alert('Por favor, ingrese su país.');
+                return;
+            }
+            datos.push(pais);
+
+            var ocupacion = document.getElementById('ocupacion').value;
+            if (ocupacion.trim() === '') {
+                alert('Por favor, ingrese su ocupación.');
+                return;
+            }
+            datos.push(ocupacion);
+
+            
+
+            // Mostrar los datos registrados
+            document.getElementById('datosOutput').innerHTML = datos.join('<br>');
+            document.getElementById('datosRegistrados').classList.remove('hidden');
+        });
+
+        function validarDNI(dni) {
+            var letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+            var regexDNI = /^\d{8}[A-Z]$/;
+            if (regexDNI.test(dni)) {
+                var letra = dni.charAt(8);
+                var numero = dni.substr(0, 8);
+                var posicionLetra = numero % 23;
+                return letra === letras.charAt(posicionLetra);
+            }
+            return false;
+        }
+
+        function validarEmail(email) {
+            var regexEmail = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+            return regexEmail.test(email);
+        }
+
+        function validarTelefono(telefono) {
+            var regexTelefono = /^\d{9}$/;
+            return regexTelefono.test(telefono);
+        }
+
+        function validarCodigoPostal(codigoPostal) {
+            var regexCodigoPostal = /^\d{5}$/;
+            return regexCodigoPostal.test(codigoPostal);
+        }
+    </script>
+</body>
+</html>
