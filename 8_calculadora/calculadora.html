@@ -2,62 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <style>
-        .pantalla {
-            height: 50px;
-            width: 150px;
-            margin-bottom: 10px;
-        }
-        
-        .teclas {
-            width: 250px;
-        }
-        /* contenedor de las teclas */
-        .btn{
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
+.calculadora{
+  width: 200px;
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
 
-        }
-        /* teclas de operaciones */
-        .operacion {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
-        }
+#pantalla {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+
+button {
+  width: 40px;
+  height: 40px;
+}
+
     </style>
-</head>
-<body>
-    <div class="contenedorPantalla">
-        <input type="number" id="resultado" class="pantalla" />
-        <input type="button" value="C" onclick="" class="btn" />
-
-        <div class="teclas">
-            <input type="button" value="7" class="btn"  />
-            <input type="button" value="8" class="btn"  />
-            <input type="button" value="9" class="btn"  />
-
-            <input type="button" value="/" class="operacion"  />
-            <input type="button" value="4" class="btn" />
-            <input type="button" value="5" class="btn"  />
-            <input type="button" value="6" class="btn"  />
-
-            <input type="button" value="*" class="operacion" />
-            <input type="button" value="1" class="btn"  />
-            <input type="button" value="2" class="btn" />
-            <input type="button" value="3" class="btn" />
-
-            <input type="button" value="-" class="operacion" />
-            <input type="button" value="0" class="btn" />
-
-            <input type="button" value="." class="operacion" />
-            <input type="button" value="=" class="btn"  />
-            <input type="button" value="+" class="operacion" />
-        </div>
+  </head>
+  <body>
+    <div class="calculadora">
+      <input type="text" id="pantalla" readonly>
+      <div class="teclado">
+        <button onclick="mostrarPantalla('7')">7</button>
+        <button onclick="mostrarPantalla('8')">8</button>
+        <button onclick="mostrarPantalla('9')">9</button>
+        <button onclick="mostrarPantalla('+')">+</button>
+        <button onclick="mostrarPantalla('4')">4</button>
+        <button onclick="mostrarPantalla('5')">5</button>
+        <button onclick="mostrarPantalla('6')">6</button>
+        <button onclick="mostrarPantalla('-')">-</button>
+        <button onclick="mostrarPantalla('1')">1</button>
+        <button onclick="mostrarPantalla('2')">2</button>
+        <button onclick="mostrarPantalla('3')">3</button>
+        <button onclick="mostrarPantalla('*')">*</button>
+        <button onclick="mostrarPantalla('0')">0</button>
+        <button onclick="mostrarPantalla('.')">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="mostrarPantalla('/')">/</button>
+        <button onclick="limpiarPantalla()">C</button>
+      </div>
     </div>
-    
-</body>
-</html>
+  
+    <script>
+        let pantalla = document.getElementById("pantalla");
+
+function mostrarPantalla(value) {
+  pantalla.value += value;
+}
+// La función calcular toma la expresión ingresada en el campo de texto, 
+//extrae los operandos y operadores, y realiza los cálculos correspondientes 
+//utilizando un bucle y una estructura de control switch. 
+//El resultado se muestra en el campo de texto.
+//utilizamos parseFloat para transformar la cadena en numero
+function calcular() {
+  let expression = pantalla.value;
+  let operandos = expression.match(/[\d.]+/g);
+  let operadores = expression.match(/[+\-*/]/g);
+//operandos es una matriz que utiliza el método match
+// para extraer los operandos de la expresión matemática. 
+//La expresión regular /[\d.]+/g busca cualquier secuencia
+//de dígitos y puntos decimales en la expresión y los almacena en la matriz operandos.
+  if (operandos && operadores && operadores.length === operandos.length - 1) {
+    //El condicional if verifica que se pueda hacer la operacion
+    //operadores y que la expresion matematica sea valida
+    //Si se cumple la condición, se inicializa la variable result con el primer operando 
+    //convertido a un número de punto flotante (parseFloat(operands[0])).
+    let result = parseFloat(operandos[0]);
+    for (let i = 0; i < operadores.length; i++) {
+      let operador = operadores[i];
+      let operando = parseFloat(operandos[i + 1]);
+      //Dentro del bucle, se utiliza un switch para determinar qué operación realizar en base al operador.
+        //Si el operador es +, se suma el operando a result.
+        //Si el operador es -, se resta el operando a result.
+        //Si el operador es *, se multiplica el operando por result.
+        //Si el operador es /, se verifica si el operando no es cero. Si no es cero, se divide result por el operando. 
+        //Si es cero, se muestra el mensaje "Error" en el campo de texto y la función se detiene con return.
+        //Después de que el bucle haya terminado de recorrer todos los operadores y operandos, 
+        //el valor final de resultado será el resultado de la operacion.
+      switch (operador) {
+        case '+':
+          result += operando;
+          break;
+        case '-':
+          result -= operando;
+          break;
+        case '*':
+          result *= operando;
+          break;
+        case '/':
+          if (operando !== 0) {
+            result /= operando;
+          } else {
+            pantalla.value = "Error";
+            return;
+          }
+          break;
+      }
+    }
+    //Si se cumple la condición del condicional if, significa que la operacion 
+    //es válida y se asigna el valor de resultado al campo de texto, 
+    //mostrando así el resultado en la calculadora.
+    //Si la condición del condicional if no se cumple, 
+    //significa que la expresión matemática era inválida 
+    // y se muestra el mensaje "Error" en el campo de texto.
+    pantalla.value = result;
+  } else {
+    pantalla.value = "Error";
+  }
+}
+
+function limpiarPantalla() {
+  pantalla.value = "";
+}
+
+    </script>
+  </body>
+  </html>
